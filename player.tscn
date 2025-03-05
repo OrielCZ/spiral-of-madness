@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxn2wupj1gdgb"]
+
+[ext_resource type="Texture2D" uid="uid://cmrj5qdavcyhf" path="res://assets/adventurer-v1.5-Sheet.png" id="1_uowed"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc3mi"]
+atlas = ExtResource("1_uowed")
+region = Rect2(0, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbp0x"]
+atlas = ExtResource("1_uowed")
+region = Rect2(50, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f5s1"]
+atlas = ExtResource("1_uowed")
+region = Rect2(100, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_221mh"]
+atlas = ExtResource("1_uowed")
+region = Rect2(150, 0, 50, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gp2we"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pc3mi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbp0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f5s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_221mh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6gi37"]
+radius = 8.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gp2we")
+frame = 1
+frame_progress = 0.562165
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_6gi37")
