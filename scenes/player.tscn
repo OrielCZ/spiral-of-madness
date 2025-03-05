@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dn8ut3jsu2qpl"]
+
+[ext_resource type="Texture2D" uid="uid://cmrj5qdavcyhf" path="res://assets/adventurer-v1.5-Sheet.png" id="1_6pbrk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t1qh"]
+atlas = ExtResource("1_6pbrk")
+region = Rect2(0, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr5cw"]
+atlas = ExtResource("1_6pbrk")
+region = Rect2(50, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bfd4"]
+atlas = ExtResource("1_6pbrk")
+region = Rect2(100, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i322"]
+atlas = ExtResource("1_6pbrk")
+region = Rect2(150, 0, 50, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d6dpj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t1qh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr5cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bfd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i322")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d6dpj")
+frame = 3
+frame_progress = 0.914706
