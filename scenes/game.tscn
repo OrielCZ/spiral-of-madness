@@ -1,21 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://7jvqig27hnrk"]
+[gd_scene load_steps=3 format=3 uid="uid://7jvqig27hnrk"]
 
 [ext_resource type="PackedScene" uid="uid://dn8ut3jsu2qpl" path="res://scenes/player.tscn" id="1_j07yk"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_it52f"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7jpxu"]
+[ext_resource type="Texture2D" uid="uid://1g2io42i0862" path="res://assets/Mossy Tileset/Mossy - TileSet.png" id="2_lm5j6"]
 
 [node name="game" type="Node2D"]
 
+[node name="Mossy-TileSet" type="Sprite2D" parent="."]
+position = Vector2(294, 1792)
+texture = ExtResource("2_lm5j6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-4, -38)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_j07yk")]
-position = Vector2(-32, -46)
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-32, 0)
-physics_material_override = SubResource("PhysicsMaterial_it52f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("WorldBoundaryShape2D_7jpxu")
+position = Vector2(-4, -38)
