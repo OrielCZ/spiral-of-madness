@@ -14,7 +14,9 @@ func _ready() -> void:
 	
 
 func update_pos(delta: float):
-	if !moving or int(position.x) == int(target_pos.x):
+	if !moving:
+		return
+	if abs(int(position.x) - int(target_pos.x)) < 100:
 		print("Standing")
 		moving = false
 		return
@@ -34,8 +36,7 @@ func _process(delta: float) -> void:
 		elif int(position.x) > int(target_pos.x):
 			$AnimatedSprite2D.flip_h = true
 		
-		if $AnimatedSprite2D.flip_h:
-			print("cs")
+		$AnimatedSprite2D.speed_scale = 1.5;
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
