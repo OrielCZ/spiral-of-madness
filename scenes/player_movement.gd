@@ -1,14 +1,15 @@
 extends Node
 
 
+var invenotry_opened = false
+
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and !invenotry_opened:
 		var dist = abs($Player.position - event.position)
 		if $Player.moving or (dist[0] > 300):
-			$Player.go_to.emit(event.position)
+			$Player.set_target(event.position)
 
-
-func _on_player_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == 1:
-			print("Open Inventory")
+func _on_player_click(_event: InputEventMouseButton) -> void:
+	if !invenotry_opened:
+		print("Open Inventory")
+	invenotry_opened = !invenotry_opened
