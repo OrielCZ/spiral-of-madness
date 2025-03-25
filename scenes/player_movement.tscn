@@ -7,6 +7,6 @@
 script = ExtResource("1_i2pnc")
 
 [node name="Player" parent="." instance=ExtResource("1_4w8g2")]
-position = Vector2(112, 483)
+position = Vector2(952, 483)
 
 [connection signal="click" from="Player" to="." method="_on_player_click"]
