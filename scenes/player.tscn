@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://dn8ut3jsu2qpl"]
 
-[ext_resource type="Script" path="res://script/player.gd" id="1_xp2y7"]
-[ext_resource type="Script" path="res://script/inventory_item.gd" id="2_j8r7v"]
+[ext_resource type="Script" uid="uid://ed1idne81gw4" path="res://script/player.gd" id="1_xp2y7"]
+[ext_resource type="Script" uid="uid://bm6cut76xjmyt" path="res://script/inventory_item.gd" id="2_j8r7v"]
 [ext_resource type="Texture2D" uid="uid://nn7b17jotvgn" path="res://assets/main_character_frames_centered.png" id="2_m2f4p"]
-[ext_resource type="Script" path="res://script/inventory.gd" id="3_pk2wc"]
+[ext_resource type="Script" uid="uid://qi83hw0ep7u6" path="res://script/inventory.gd" id="3_pk2wc"]
 
 [sub_resource type="Resource" id="Resource_ttqh7"]
 script = ExtResource("3_pk2wc")
