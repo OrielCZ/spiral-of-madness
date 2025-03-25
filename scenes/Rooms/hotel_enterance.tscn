@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://diqgror6sh1p2"]
+
+[ext_resource type="Texture2D" uid="uid://3gk0hw7o173r" path="res://assets/hotel_entrance/background.png" id="1_uiml2"]
+[ext_resource type="Texture2D" uid="uid://c1qql63y1w2oq" path="res://assets/hotel_entrance/lamp.png" id="2_ewmvv"]
+[ext_resource type="Texture2D" uid="uid://yycjb35s82c0" path="res://assets/hotel_entrance/crash_car.png" id="3_xakjx"]
+[ext_resource type="PackedScene" uid="uid://dn8ut3jsu2qpl" path="res://scenes/player.tscn" id="4_8lpt8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -10
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_uiml2")
+
+[node name="Lamp" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(-339, -157)
+scale = Vector2(0.990752, 1.2)
+texture = ExtResource("2_ewmvv")
+
+[node name="CrashCar" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(431, 47)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_xakjx")
+
+[node name="Player" parent="." instance=ExtResource("4_8lpt8")]
+position = Vector2(445, 65)
+scale = Vector2(-1, 1)
