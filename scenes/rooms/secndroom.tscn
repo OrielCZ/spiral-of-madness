@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ju4pa0tuoj1j"]
+
+[ext_resource type="Texture2D" uid="uid://se0hbgbh6jj7" path="res://assets/items.png" id="1_j06nr"]
+
+[node name="Secndroom" type="Node2D"]
+
+[node name="Items" type="Sprite2D" parent="."]
+position = Vector2(1149, 230)
+texture = ExtResource("1_j06nr")
