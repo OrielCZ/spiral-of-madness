@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvkgd3hiuwq4o"]
+
+[ext_resource type="Script" uid="uid://c8svvqfdmxqg2" path="res://script/car.gd" id="1_nhxoo"]
+[ext_resource type="Texture2D" uid="uid://yycjb35s82c0" path="res://assets/hotel_entrance/crash_car.png" id="1_svk5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhxoo"]
+size = Vector2(371, 411)
+
+[node name="Car" type="Area2D"]
+script = ExtResource("1_nhxoo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(31.5, 160.5)
+shape = SubResource("RectangleShape2D_nhxoo")
+
+[node name="CrashCar" type="Sprite2D" parent="."]
+texture = ExtResource("1_svk5y")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -367.0
+offset_top = -341.0
+offset_right = 1.0
+offset_bottom = -187.0
+scale = Vector2(1.49285, 2.09989)
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

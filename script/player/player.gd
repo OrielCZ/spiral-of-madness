@@ -10,8 +10,19 @@ var animating = false
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready():
 	target_pos = position
+	var global_state = get_node("/root/GlobalState")
+	
+	if global_state.last_door != "":
+		for door in get_tree().get_nodes_in_group("doors"):
+			if door.door_id == global_state.last_door:
+				global_position = door.global_position + Vector2(0, 50)  # Posun před dveře
+				break  # Hráče už jsme přesunuli, dál nehledáme
+	
+	
+	
+	
 	
 func move(delta: float) -> void:
 	print(target_pos, position)

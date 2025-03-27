@@ -1,5 +1,4 @@
-extends Node
-
+extends Node2D
 
 var invenotry_opened = false
 
