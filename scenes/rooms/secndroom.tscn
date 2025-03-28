@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ju4pa0tuoj1j"]
+[gd_scene load_steps=5 format=3 uid="uid://ju4pa0tuoj1j"]
 
 [ext_resource type="Script" uid="uid://ch30stxioxi0g" path="res://script/rooms/secndroom.gd" id="1_3dn7w"]
 [ext_resource type="Texture2D" uid="uid://se0hbgbh6jj7" path="res://assets/items.png" id="1_j06nr"]
 [ext_resource type="PackedScene" uid="uid://c38rriqt11jfr" path="res://scenes/dor.tscn" id="4_k6113"]
+[ext_resource type="PackedScene" uid="uid://dn8ut3jsu2qpl" path="res://scenes/player.tscn" id="4_pw7yt"]
 
 [node name="Secndroom" type="Node2D"]
 script = ExtResource("1_3dn7w")
@@ -15,4 +16,7 @@ texture = ExtResource("1_j06nr")
 position = Vector2(930, 339)
 scale = Vector2(0.433438, 0.433438)
 target_scene = "res://scenes/rooms/hotel_enterance.tscn"
-door_id = "Mein_dors"
+door_id = "Mein_dors2"
+
+[node name="Player" parent="." instance=ExtResource("4_pw7yt")]
+position = Vector2(101, 403)

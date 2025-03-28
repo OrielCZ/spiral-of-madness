@@ -8,7 +8,6 @@ var speed: float = 50
 var animating = false
 @export var inventory: Inventory
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	target_pos = position
@@ -19,11 +18,7 @@ func _ready():
 			if door.door_id == global_state.last_door:
 				global_position = door.global_position + Vector2(0, 50)  # Posun před dveře
 				break  # Hráče už jsme přesunuli, dál nehledáme
-	
-	
-	
-	
-	
+
 func move(delta: float) -> void:
 	print(target_pos, position)
 	if position.x > target_pos.x:
@@ -64,7 +59,6 @@ func set_target(pos):
 	target_pos = pos
 	moving = true
 	animating = true
-
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:

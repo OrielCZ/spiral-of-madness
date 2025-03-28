@@ -31,11 +31,13 @@ position = Vector2(54, 382)
 scale = Vector2(1.09334, 1.09)
 
 [node name="Car" parent="." instance=ExtResource("6_ptr5c")]
+z_index = 5
 position = Vector2(1020, 359)
 scale = Vector2(0.611689, 0.611689)
 
 [node name="Dor" parent="." instance=ExtResource("6_6rngx")]
-position = Vector2(546, 299)
-scale = Vector2(0.592943, 0.592943)
+z_index = -5
+position = Vector2(548, 295)
+scale = Vector2(0.61, 0.61)
 target_scene = "res://scenes/rooms/secndroom.tscn"
 door_id = "Mein_dors"

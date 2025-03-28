@@ -6,8 +6,8 @@ extends Area2D
 func _ready():
 	add_to_group("doors")  # Přidá dveře do skupiny
 
-func _on_body_entered(body):
-	if body is CharacterBody2D:  # Jen hráč prochází dveřmi
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.pressed: # Jen hráč prochází dveřmi
 		# Uložíme, odkud hráč přišel
 		var global_state = get_node("/root/GlobalState")
 		global_state.last_door = door_id  

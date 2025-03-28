@@ -9,18 +9,18 @@ size = Vector2(371, 411)
 [node name="Car" type="Area2D"]
 script = ExtResource("1_nhxoo")
 
+[node name="CrashCar" type="Sprite2D" parent="."]
+texture = ExtResource("1_svk5y")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(31.5, 160.5)
 shape = SubResource("RectangleShape2D_nhxoo")
 
-[node name="CrashCar" type="Sprite2D" parent="."]
-texture = ExtResource("1_svk5y")
-
 [node name="Label" type="Label" parent="."]
-offset_left = -367.0
-offset_top = -341.0
-offset_right = 1.0
-offset_bottom = -187.0
+offset_left = -333.0
+offset_top = -369.0
+offset_right = 35.0
+offset_bottom = -215.0
 scale = Vector2(1.49285, 2.09989)
 horizontal_alignment = 1
 vertical_alignment = 1
